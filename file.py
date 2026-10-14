@@ -1,9 +1,12 @@
 skills=[]
 
-with open("my_Skills.txt","r")as f:
-    for line in f:
-        skills.append(line.strip().lower())
-
+try:
+    with open("my_Skills.txt","r")as f:
+        for line in f:
+            skills.append(line.strip().lower())
+except FileNotFoundError :
+    print("No skills file yet, starting fresh")
+   
 print("Loaded" , len(skills), "skills")
 for skill in skills:
     print(skill)
