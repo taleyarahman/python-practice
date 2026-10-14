@@ -1,6 +1,6 @@
 skills=[]
 
-try:
+try:  #put only the lines that can fail inside try, and name the exact error.
     with open("my_Skills.txt","r")as f:
         for line in f:
             skills.append(line.strip().lower())
